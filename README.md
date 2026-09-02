@@ -230,50 +230,50 @@ Prerequisites
 
 Setup Instructions
 
-    Clone the Repository:
+Clone the Repository:
 
 Bash
 
-git clone [https://github.com/AliTalhaOruc/ros2-gimbal-target-engagement.git](https://github.com/AliTalhaOruc/ros2-gimbal-target-engagement.git)
-cd ros2-gimbal-target-tracker
+       git clone [https://github.com/AliTalhaOruc/ros2-gimbal-target-engagement.git](https://github.com/AliTalhaOruc/ros2-gimbal-target-engagement.git)
+       cd ros2-gimbal-target-tracker
 
-    Install ROS 2 Dependencies:
-
-Bash
-
-rosdep update
-rosdep install --from-paths src --ignore-src -r -y
-
-    Install Python Packages:
+Install ROS 2 Dependencies:
 
 Bash
 
-pip install -r requirements.txt
+       rosdep update
+       rosdep install --from-paths src --ignore-src -r -y
 
-    Build the Workspace:
+Install Python Packages:
 
 Bash
 
-colcon build --symlink-install
-source install/setup.bash
+       pip install -r requirements.txt
+
+Build the Workspace:
+
+Bash
+
+       colcon build --symlink-install
+       source install/setup.bash
 
 🚀 Usage Guide
 
 Launch Simulation & Gimbal:
 Bash
 
-ros2 launch gimbal_description display.launch.py
+       ros2 launch gimbal_description display.launch.py
 
 Start Target Movement:
 Bash
 
-ros2 run gimbal_description target_mover
+       ros2 run gimbal_description target_mover
 
 Start Detection & Tracking Pipeline:
 Bash
 
-ros2 run gimbal_description target_detector
-ros2 run gimbal_description target_tracker
+       ros2 run gimbal_description target_detector
+       ros2 run gimbal_description target_tracker
 
 💻 Performance
 
