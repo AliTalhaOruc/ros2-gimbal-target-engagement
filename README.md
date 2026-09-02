@@ -24,15 +24,37 @@ The entire perception, tracking, prediction, aiming, firing, and hit-detection l
 
 ---
 
-## 🎬 Demo
+## 🎬 Demo & Test Scenarios
 
-### Target Detection
-Custom-trained YOLOv8 model detecting the target drone.
-![Target Detection](src/gimbal_description/media/yolo_detection.png)
+### 1. Smooth Sinusoidal Trajectory Tracking & Hit Logging
+Smooth target engagement along a sinusoidal path. The terminal on the right logs real-time hit events published by the Gazebo C++ physics plugin.
 
-### Autonomous Engagement
-Real-time tracking, aiming, and projectile interception.
-![Autonomous Engagement](src/gimbal_description/media/demo.gif)
+![Sinusoidal Tracking](src/gimbal_description/media/sinus_mov.gif)
+
+---
+
+### 2. Horizontal Motion & RQT Angle Tracking Analysis
+Comparative view showing the horizontal trajectory tracking alongside RQT plots for real-time target position and error analysis.
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <b>Horizontal Trajectory Tracking</b><br/><br/>
+      <img src="src/gimbal_description/media/horizontal_rec_mov.gif" alt="Horizontal Tracking" width="100%"/>
+    </td>
+    <td width="50%" align="center">
+      <b>RQT Target Tracking Analysis</b><br/><br/>
+      <img src="src/gimbal_description/media/h_rec_rqt.gif" alt="RQT Plot" width="100%"/>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 3. High-Speed Stress Test (Square Pattern)
+Stress-testing the tracking algorithm with rapid high-speed square maneuvers. Demonstrates system limits, prediction behavior, and recovery during sharp trajectory shifts.
+
+![High Speed Square Tracking](src/gimbal_description/media/quick_rec_mov.gif)
 
 ---
 
