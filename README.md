@@ -48,11 +48,11 @@ Comparative view showing the horizontal trajectory tracking alongside RQT plots 
   <tr>
     <td width="50%" align="center">
       <b>Horizontal Trajectory Tracking</b><br/><br/>
-      <video src="https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/d7941584-5c04-4a3d-ad03-fa75ec5622d3.mp4" autoplay loop muted playsinline width="100%"></video>
+      <video src="https://github.com/user-attachments/assets/d7941584-5c04-4a3d-ad03-fa75ec5622d3.mp4" autoplay loop muted playsinline width="100%"></video>
     </td>
     <td width="50%" align="center">
       <b>RQT Target Tracking Analysis</b><br/><br/>
-      <video src="https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/cebad52a-2c46-4ade-aae5-0cb5a90a1814.mp4" autoplay loop muted playsinline width="100%"></video>
+      <video src="https://github.com/user-attachments/assets/cebad52a-2c46-4ade-aae5-0cb5a90a1814.mp4" autoplay loop muted playsinline width="100%"></video>
     </td>
   </tr>
 </table>
@@ -71,7 +71,20 @@ Stress-testing the tracking algorithm with rapid high-speed square maneuvers. De
        width="100%">
 </video>
 
+---
 
+
+### 4. 3D Figure-8 & Altitude Tracking (RQT Plot Analysis)
+Evaluates the tracking system during complex 3D maneuvers, including simultaneous altitude changes (climb/descent) and continuous Figure-8 trajectories. The embedded RQT plot verifies dynamic joint response, minimal pitch/yaw error, and steady-state tracking performance.
+
+<video src="https://github.com/user-attachments/assets/c65a5ebd-29d2-4f15-a2a0-d5035b1d32c1.mp4" 
+       controls 
+       autoplay 
+       loop 
+       muted 
+       playsinline 
+       width="100%">
+</video>
 ---
 
 ## ✨ Main Features
