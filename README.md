@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/29f52aee-c1a8-4cda-a5b3-242b22e6c3e2
-
 # 🎯 Autonomous ROS 2 Gimbal Tracking & Engagement System
 
 [![ROS 2](https://img.shields.io/badge/ROS2-Humble-blue.svg)](https://docs.ros.org/)
@@ -52,11 +48,11 @@ Comparative view showing the horizontal trajectory tracking alongside RQT plots 
   <tr>
     <td width="50%" align="center">
       <b>Horizontal Trajectory Tracking</b><br/><br/>
-      <img src="src/gimbal_description/media/horizontal_rec_mov.gif" alt="Horizontal Tracking" width="100%"/>
+      <video src="https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/d7941584-5c04-4a3d-ad03-fa75ec5622d3.mp4" autoplay loop muted playsinline width="100%"></video>
     </td>
     <td width="50%" align="center">
       <b>RQT Target Tracking Analysis</b><br/><br/>
-      <img src="src/gimbal_description/media/h_rec_rqt.gif" alt="RQT Plot" width="100%"/>
+      <video src="https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/cebad52a-2c46-4ade-aae5-0cb5a90a1814.mp4" autoplay loop muted playsinline width="100%"></video>
     </td>
   </tr>
 </table>
@@ -66,7 +62,15 @@ Comparative view showing the horizontal trajectory tracking alongside RQT plots 
 ### 3. High-Speed Stress Test (Square Pattern)
 Stress-testing the tracking algorithm with rapid high-speed square maneuvers. Demonstrates system limits, prediction behavior, and recovery during sharp trajectory shifts.
 
-![High Speed Square Tracking](src/gimbal_description/media/quick_rec_mov.gif)
+<video src="https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/732c370e-9d20-4eab-9f47-4006c1a61659.mp4" 
+       controls 
+       autoplay 
+       loop 
+       muted 
+       playsinline 
+       width="100%">
+</video>
+
 
 ---
 
