@@ -95,6 +95,8 @@ Instead of relying on simple color segmentation, the final system uses a custom-
 - **Output:** The detector publishes target center pixels (c_x, c_y), bounding box coordinates, and detection confidence through ROS 2 topics.
 
 ### 2. YOLOv8 Training Pipeline
+
+<img width="2410" height="1190" alt="results" src="https://github.com/user-attachments/assets/b2d8c29a-1a80-4903-91bb-57417ca76c60" />
 The original prototype relied on HSV color segmentation. To improve robustness, a custom YOLOv8 model was trained. 
 
 **Training process:**
