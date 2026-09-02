@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+
+    <!-- Işık ve Zemin tanımları... -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- DRONE MODELİ VE PLUGIN'LER -->
+    <model name="moving_drone">
+      <pose>2.0 0.0 1.5 0 0 0</pose> <!-- Başlangıç Konumu (X, Y, Z, R, P, Y) -->
+
+      <!-- Görsel ve Fiziksel Gövde (Iris benzeri basit görünüm) -->
+      <link name="base_link">
+        <inertial>
+          <mass>1.5</mass>
+          <inertia>
+            <ixx>0.034753</ixx> <ixy>0</ixy> <ixz>0</ixz>
+            <iyy>0.045893</iyy> <iyz>0</iyz>
+            <izz>0.0977</izz>
+          </inertia>
+        </inertial>
+
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <!-- Gazebo varsayılan Iris drone mesh'i -->
+              <uri>model://iris_with_standoff/meshes/iris.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.47 0.47 0.11</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+
+      <!-- 1. TF YAYINLAYICI PLUGIN (3D True Position - odom -> moving_drone/base_link) -->
+      <plugin name="drone_ground_truth" filename="libgazebo_ros_p3d.so">
+        <ros>
+          <namespace>/moving_drone</namespace>
+          <remapping>odom:=/drone_odom</remapping>
+        </ros>
+        <frame_name>odom</frame_name>
+        <body_name>base_link</body_name>
+        <update_rate>50.0</update_rate>
+        <gaussian_noise>0.0</gaussian_noise>
+        <publish_odom_tf>true</publish_odom_tf> <!-- TF Ağacına otomatik basar -->
+      </plugin>
+
+      <!-- 2. HAREKET KONTROL PLUGIN'I (cmd_vel ile 3D Hız Komutu Alır) -->
+      <plugin name="drone_object_controller" filename="libgazebo_ros_planar_move.so">
+        <ros>
+          <namespace>/moving_drone</namespace>
+          <remapping>cmd_vel:=/moving_drone/cmd_vel</remapping>
+        </ros>
+        <command_topic>/moving_drone/cmd_vel</command_topic>
+        <odometry_topic>/moving_drone/odom</odometry_topic>
+        <odometry_frame>odom</odometry_frame>
+        <odometry_rate>20.0</odometry_rate>
+        <robot_base_frame>base_link</robot_base_frame>
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>false</publish_odom_tf> <!-- p3d yayınladığı için bunu false yapıyoruz -->
+      </plugin>
+
+    </model>
+
+  </world>
+</sdf>

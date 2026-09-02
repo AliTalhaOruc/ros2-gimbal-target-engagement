@@ -1,0 +1,44 @@
+# ==========================================
+# ROS 2 Build & Workspace Directories
+# ==========================================
+build/
+install/
+log/
+
+# ==========================================
+# YOLO, Training Outputs & Datasets
+# ==========================================
+runs/
+dataset/
+yolo_data/
+*.yaml
+!src/gimbal_description/config/*.yaml
+
+# ==========================================
+# Weights & Models (Except best.pt in src)
+# ==========================================
+# Kök dizindeki ve geçici indirilen tüm weights/.pt uzantılarını es geç
+weights/
+*.pt
+*.onnx
+*.engine
+
+# SADECE ROS paketinin içindeki eğitilmiş nihai modeli Git'e dahil et:
+!src/gimbal_description/weights/best.pt
+
+# ==========================================
+# Python & Environment Artifacts
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+
+# ==========================================
+# VS Code & System Files
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
