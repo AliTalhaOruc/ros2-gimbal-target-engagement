@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/29f52aee-c1a8-4cda-a5b3-242b22e6c3e2
+
 # 🎯 Autonomous ROS 2 Gimbal Tracking & Engagement System
 
 [![ROS 2](https://img.shields.io/badge/ROS2-Humble-blue.svg)](https://docs.ros.org/)
@@ -29,7 +33,15 @@ The entire perception, tracking, prediction, aiming, firing, and hit-detection l
 ### 1. Smooth Sinusoidal Trajectory Tracking & Hit Logging
 Smooth target engagement along a sinusoidal path. The terminal on the right logs real-time hit events published by the Gazebo C++ physics plugin.
 
-![Sinusoidal Tracking](src/gimbal_description/media/sinus_mov.gif)
+<video src="https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/6017e9e7-201e-44c0-adbb-5a3b202057a5.mp4" 
+       controls 
+       autoplay 
+       loop 
+       muted 
+       playsinline 
+       width="100%">
+</video>
+
 
 ---
 
