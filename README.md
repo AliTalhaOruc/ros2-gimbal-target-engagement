@@ -66,9 +66,9 @@ The turret continuously calculates Yaw and Pitch angles from target position inf
 
 ### 5. Automatic Fire Control
 Once the target is inside the firing window, the system automatically triggers engagement:
-```text
+```
 Target Detected ──► Prediction Updated ──► Gimbal Aligned ──► Projectile Spawned
-
+```
 6. Custom Projectile Physics Plugin
 
 A custom Gazebo C++ plugin (BulletPlugin.cc) was developed for realistic ballistics simulation:
@@ -183,7 +183,7 @@ Setup Instructions
 
 Bash
 
-git clone [https://github.com/alitalhaoruc/ros2-gimbal-target-tracker.git](https://github.com/alitalhaoruc/ros2-gimbal-target-tracker.git)
+git clone [https://github.com/AliTalhaOruc/ros2-gimbal-target-engagement.git](https://github.com/AliTalhaOruc/ros2-gimbal-target-engagement.git)
 cd ros2-gimbal-target-tracker
 
     Install ROS 2 Dependencies:
